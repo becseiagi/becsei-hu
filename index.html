@@ -41,18 +41,17 @@
     }
 
     .header {
-      padding: 24px 18px 22px;
-      text-align: center;
-      background: var(--white);
+      padding: 12px 5%;
+      background: #ffffff;
       border-bottom: 4px solid var(--lime);
     }
 
     .header-image {
       display: block;
       width: 100%;
-      max-width: 1100px;
+      max-width: 360px;
       height: auto;
-      margin: 0 auto 10px;
+      margin: 0;
     }
 
     .tagline {
@@ -61,6 +60,67 @@
       font-size: clamp(16px, 2.5vw, 21px);
       font-weight: 600;
     }
+
+    .header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.header-brand {
+  flex: 1;
+  min-width: 0;
+}
+
+.tagline {
+  margin: 5px 0 0;
+  color: var(--dark);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.header-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.header-contact span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.header-contact a {
+  color: var(--dark);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.header-contact a:hover {
+  color: var(--lime-dark);
+}
+
+@media (max-width: 600px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .header-image {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .header-contact {
+    align-items: center;
+  }
+}
+
 
     nav {
       position: sticky;
@@ -420,13 +480,23 @@
 <body>
 
   <header class="header">
+<div class="header-inner">
+  <div class="header-brand">
     <img
       class="header-image"
       src="https://becseiagi.github.io/becsei-hu/Fejl%C3%A9c.jpg"
       alt="Becsei – Helyben vagyunk"
     >
     <p class="tagline">A szép otthon, a falaknál kezdődik.</p>
-  </header>
+
+  <div>
+    <div class="header-contact">
+<span>Keressen bizalommal!</span> 
+    ía href="Telefon számaink: +36 70 908-50-93</a>
+    <a href=" vagy +36 70 947-39-33</a>
+      </div>
+      </div>
+      </header>
 
   <nav aria-label="Fő navigáció">
     <a href="#szolgaltatasok">Szolgáltatások</a>
