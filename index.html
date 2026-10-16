@@ -1,48 +1,579 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!DOCTYPE html><html lang="hu"><head>  <meta charset="UTF-8">  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Becsei – Helyben vagyunk | Hódmezővásárhely</title>  <meta name="description" content="Szobafestés, mázolás, tapétázás, hideg- és melegburkolás, térkövezés Hódmezővásárhelyen és környékén.">  <style>    :root {      --lime: #a8d900;      --dark: #252a25;      --light: #f7f8f5;      --text: #333832;    }
-    * {      box-sizing: border-box;    }
-    html {      scroll-behavior: smooth;    }
-    body {      margin: 0;      font-family: Arial, Helvetica, sans-serif;      color: var(--text);      background: #ffffff;      line-height: 1.6;    }
-    header {      background: var(--light);      text-align: center;      padding: 20px 16px 28px;      border-bottom: 4px solid var(--lime);    }
-    .header-image {      display: block;      width: 100%;      max-width: 1100px;      height: auto;      margin: 0 auto 16px;    }
-    header h1 {      margin: 10px 0 4px;      color: var(--dark);      font-size: clamp(28px, 5vw, 46px);    }
-    header p {      margin: 0;      font-size: 18px;    }
-    .highlight {      color: #648500;      font-weight: bold;    }
-    nav {      display: flex;      justify-content: center;      flex-wrap: wrap;      gap: 10px 24px;      padding: 15px;      background: var(--dark);    }
-    nav a {      color: white;      text-decoration: none;      font-weight: bold;    }
-    nav a:hover {      color: var(--lime);    }
-    .hero {      padding: 55px 20px;      text-align: center;      background: #f4f6ef;    }
-    .hero h2 {      font-size: clamp(25px, 4vw, 38px);      margin: 0 0 12px;      color: var(--dark);    }
-    .hero p {      max-width: 700px;      margin: 0 auto 24px;      font-size: 18px;    }
-    .button {      display: inline-block;      padding: 13px 24px;      border-radius: 5px;      background: var(--lime);      color: var(--dark);      font-weight: bold;      text-decoration: none;    }
-    section {      padding: 45px 20px;      scroll-margin-top: 20px;    }
-    .container {      max-width: 1050px;      margin: 0 auto;    }
-    section h2 {      margin: 0 0 24px;      text-align: center;      color: var(--dark);      font-size: 30px;    }
-    .services {      display: grid;      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));      gap: 18px;    }
-    .service {      padding: 24px 18px;      border: 1px solid #e4e8dd;      border-top: 4px solid var(--lime);      border-radius: 7px;      background: white;      text-align: center;    }
-    .service h3 {      margin: 0 0 8px;      color: var(--dark);    }
-    .about {      background: var(--light);      text-align: center;    }
-    .about p {      max-width: 760px;      margin: 0 auto;      font-size: 17px;    }
-    .contact {      text-align: center;    }
-    .contact-details {      display: inline-block;      text-align: left;      font-size: 18px;      margin-bottom: 20px;    }
-    .contact-details a {      color: #526f00;      font-weight: bold;      text-decoration: none;    }
-    footer {      padding: 22px 16px;      background: var(--dark);      color: white;      text-align: center;    }
-    footer p {      margin: 4px 0;    }
-    @media (max-width: 600px) {      .hero {        padding: 38px 16px;      }
-      section {        padding: 35px 16px;      }    }  </style></head>
-<body> <header>   
-    <img src="https://becseiagi.github.io/becsei-hu/Fejl%C3%A9c.jpg" alt="Becsei – Helyben vagyunk" style="display:block;width:100%;max-width:1100px;height:auto;margin:0 auto 16px;">
-    <p>A szép otthon, a falaknál kezdődik.</p>  </header>
-  <nav>    <a href="#szolgaltatasok">Szolgáltatások</a>    <a href="#rolunk">Rólunk</a>    <a href="#kapcsolat">Kapcsolat</a>  </nav>
-  <main>    <section class="hero">      <h2>Megbízható munka, szép otthon.</h2>     <p>        Festés, burkolás és térkövezés Hódmezővásárhelyen        és a környező településeken.      </p>      <a class="button" href="#kapcsolat">Kérjen ajánlatot!</a>    </section>
-    <section id="szolgaltatasok">      <div class="container">        <h2>Szolgáltatásaink</h2>
-        <div class="services">          <article class="service">            <h3>Szobafestés</h3>            <p>Falak és mennyezetek igényes festése.</p>          </article>
-          <article class="service">            <h3>Mázolás</h3>            <p>Felületek gondos mázolása, megújítása.</p>          </article>
-          <article class="service">            <h3>Tapétázás</h3>            <p>Tapétázás gondos kivitelezéssel.</p>          </article>
-          <article class="service">            <h3>Hideg- és melegburkolás</h3>            <p>Burkolási munkák otthonokban és más helyiségekben.</p>          </article>
-          <article class="service">            <h3>Térkövezés</h3>            <p>Járdák, udvarok és kerti felületek térkövezése.</p>          </article>        </div>      </div>    </section>
-    <section id="rolunk" class="about">      <div class="container">        <h2>Miért válasszon minket?</h2>        <p>          Fontos számunkra a gondos munkavégzés, az igényes kivitelezés          és az ügyfeleinkkel való korrekt együttműködés.          Hódmezővásárhelyen és környékén állunk rendelkezésére.        </p>      </div>    </section>
-    <section id="kapcsolat" class="contact">      <div class="container">        <h2>Kapcsolat</h2>        <p>Keressen minket bizalommal ajánlatkéréshez!</p>
-        <div class="contact-details">          <p>            Telefon:            <a href="tel:+36709085093">70/908-50-93</a>          </p>          <p>            Telefon:            <a href="tel:+36709473933">70/947-39-33</a>          </p>          <p>            E-mail:            <a href="mailto:becseiagi@gmail.com">becseiagi@gmail.com</a>          </p>          <p><strong>Terület:</strong> Hódmezővásárhely és környéke</p>        </div>      </div>    </section>  </main>
-  <footer>    <p><strong>Becsei – Helyben vagyunk.</strong></p>    <p>A szép otthon, a falaknál kezdődik.</p>  </footer>
-</body></html>
+  <title>Becsei – Helyben vagyunk | Hódmezővásárhely</title>
+  <meta name="description" content="Szobafestés, mázolás, tapétázás, hideg- és melegburkolás, térkövezés Hódmezővásárhelyen és környékén. Kérjen ajánlatot!">
+
+  <style>
+    :root {
+      --lime: #a8d900;
+      --lime-dark: #658600;
+      --dark: #242824;
+      --text: #383d36;
+      --muted: #687064;
+      --light: #f5f7f0;
+      --white: #ffffff;
+      --border: #e4e9dc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 75px;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    a {
+      transition: 0.2s ease;
+    }
+
+    .header {
+      padding: 24px 18px 22px;
+      text-align: center;
+      background: var(--white);
+      border-bottom: 4px solid var(--lime);
+    }
+
+    .header-image {
+      display: block;
+      width: 100%;
+      max-width: 1100px;
+      height: auto;
+      margin: 0 auto 10px;
+    }
+
+    .tagline {
+      margin: 0;
+      color: var(--dark);
+      font-size: clamp(16px, 2.5vw, 21px);
+      font-weight: 600;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px 30px;
+      padding: 13px 16px;
+      background: var(--dark);
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    nav a {
+      padding: 5px 3px;
+      color: var(--white);
+      font-size: 15px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--lime);
+    }
+
+    .hero {
+      padding: 76px 20px 82px;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at top, #ffffff 0%, transparent 72%),
+        var(--light);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--lime-dark);
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 800px;
+      margin: 0 auto 18px;
+      color: var(--dark);
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    .hero h1 span {
+      text-decoration: underline;
+      text-decoration-color: var(--lime);
+      text-decoration-thickness: 5px;
+      text-underline-offset: 7px;
+    }
+
+    .hero p {
+      max-width: 680px;
+      margin: 0 auto 30px;
+      color: var(--muted);
+      font-size: clamp(16px, 2vw, 19px);
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 27px;
+      border: 2px solid var(--lime);
+      border-radius: 6px;
+      background: var(--lime);
+      color: var(--dark);
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 5px 14px rgba(100, 130, 0, 0.13);
+    }
+
+    .button:hover {
+      background: var(--dark);
+      border-color: var(--dark);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .section {
+      padding: 70px 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      margin: 0 0 12px;
+      color: var(--dark);
+      font-size: clamp(27px, 4vw, 36px);
+      line-height: 1.25;
+      text-align: center;
+    }
+
+    .section-intro {
+      max-width: 680px;
+      margin: 0 auto 38px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .heading-line {
+      width: 58px;
+      height: 5px;
+      margin: 18px auto 22px;
+      border-radius: 4px;
+      background: var(--lime);
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .service {
+      padding: 27px 23px 29px;
+      border: 1px solid var(--border);
+      border-top: 5px solid var(--lime);
+      border-radius: 9px;
+      background: var(--white);
+      box-shadow: 0 5px 20px rgba(36, 40, 36, 0.045);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .service:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 25px rgba(36, 40, 36, 0.09);
+    }
+
+    .service-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 39px;
+      height: 39px;
+      margin-bottom: 14px;
+      border-radius: 50%;
+      background: var(--light);
+      color: var(--lime-dark);
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .service h3 {
+      margin: 0 0 9px;
+      color: var(--dark);
+      font-size: 20px;
+      line-height: 1.35;
+    }
+
+    .service p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .about {
+      background: var(--light);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about-content {
+      max-width: 790px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-content p {
+      margin: 0 0 16px;
+      font-size: 17px;
+    }
+
+    .about-points {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .about-point {
+      padding: 9px 15px;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      background: var(--white);
+      color: var(--dark);
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .about-point span {
+      color: var(--lime-dark);
+      margin-right: 5px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact-panel {
+      max-width: 740px;
+      margin: 32px auto 0;
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--white);
+      box-shadow: 0 8px 28px rgba(36, 40, 36, 0.06);
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 17px;
+      padding: 17px 0;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+    }
+
+    .contact-row:last-child {
+      border-bottom: 0;
+    }
+
+    .contact-icon {
+      display: flex;
+      flex: 0 0 43px;
+      align-items: center;
+      justify-content: center;
+      width: 43px;
+      height: 43px;
+      border-radius: 8px;
+      background: var(--light);
+      color: var(--lime-dark);
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .contact-label {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .contact-row a {
+      color: var(--dark);
+      font-size: 17px;
+      font-weight: bold;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-row a:hover {
+      color: var(--lime-dark);
+    }
+
+    .contact-note {
+      margin: 25px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 26px 18px;
+      background: var(--dark);
+      color: #e8ebe5;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    footer .footer-accent {
+      color: var(--lime);
+      font-weight: bold;
+    }
+
+    @media (max-width: 800px) {
+      .services {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .section {
+        padding: 55px 18px;
+      }
+
+      .hero {
+        padding: 58px 18px 64px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .header {
+        padding: 15px 10px 18px;
+      }
+
+      nav {
+        gap: 5px 17px;
+        padding: 10px;
+      }
+
+      nav a {
+        font-size: 14px;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .service {
+        padding: 23px 20px;
+      }
+
+      .contact-panel {
+        padding: 17px;
+      }
+
+      .contact-row {
+        gap: 12px;
+      }
+
+      .contact-row a {
+        font-size: 16px;
+      }
+
+      .about-points {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <img
+      class="header-image"
+      src="https://becseiagi.github.io/becsei-hu/Fejl%C3%A9c.jpg"
+      alt="Becsei – Helyben vagyunk"
+    >
+    <p class="tagline">A szép otthon, a falaknál kezdődik.</p>
+  </header>
+
+  <nav aria-label="Fő navigáció">
+    <a href="#szolgaltatasok">Szolgáltatások</a>
+    <a href="#rolunk">Rólunk</a>
+    <a href="#kapcsolat">Kapcsolat</a>
+  </nav>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Hódmezővásárhely és környéke</p>
+        <h1>Megbízható munka.<br><span>Szép otthon.</span></h1>
+        <p>
+          Szobafestés, mázolás, tapétázás, hideg- és melegburkolás,
+          valamint térkövezés gondos kivitelezéssel.
+        </p>
+        <a class="button" href="#kapcsolat">Kérjen ajánlatot!</a>
+      </div>
+    </section>
+
+    <section class="section" id="szolgaltatasok">
+      <div class="container">
+        <h2 class="section-heading">Szolgáltatásaink</h2>
+        <div class="heading-line"></div>
+        <p class="section-intro">
+          Otthona megújításától az udvar rendezéséig
+          számíthat ránk a tervezett munkák kivitelezésében.
+        </p>
+
+        <div class="services">
+
+          <article class="service">
+            <div class="service-number">01</div>
+            <h3>Szobafestés</h3>
+            <p>Falak és mennyezetek festése, otthonának friss, rendezett megjelenéséért.</p>
+          </article>
+
+          <article class="service">
+            <div class="service-number">02</div>
+            <h3>Mázolás</h3>
+            <p>Fa- és egyéb megfelelő felületek gondos mázolása és megújítása.</p>
+          </article>
+
+          <article class="service">
+            <div class="service-number">03</div>
+            <h3>Tapétázás</h3>
+            <p>Tapétázási munkák a helyiség stílusához illő, igényes végeredményért.</p>
+          </article>
+
+          <article class="service">
+            <div class="service-number">04</div>
+            <h3>Hideg- és melegburkolás</h3>
+            <p>Burkolási munkák otthonokban és más helyiségekben, a feladathoz igazodva.</p>
+          </article>
+
+          <article class="service">
+            <div class="service-number">05</div>
+            <h3>Térkövezés</h3>
+            <p>Járdák, udvarok és kerti felületek térkövezése a rendezett környezetért.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="rolunk">
+      <div class="container about-content">
+        <h2 class="section-heading">Miért válasszon minket?</h2>
+        <div class="heading-line"></div>
+
+        <p>
+          Számunkra fontos a gondos munkavégzés, az igényes kivitelezés
+          és az ügyfeleinkkel való korrekt együttműködés.
+        </p>
+        <p>
+          Hódmezővásárhelyen és környékén vállalunk munkákat.
+          Célunk, hogy a megbeszélt feladatot odafigyeléssel,
+          az elvárásoknak megfelelően végezzük el.
+        </p>
+
+        <div class="about-points">
+          <div class="about-point"><span>✓</span> Gondos munkavégzés</div>
+          <div class="about-point"><span>✓</span> Korrekt egyeztetés</div>
+          <div class="about-point"><span>✓</span> Helyi szolgáltatás</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="kapcsolat">
+      <div class="container">
+        <h2 class="section-heading">Vegye fel velünk a kapcsolatot!</h2>
+        <div class="heading-line"></div>
+        <p class="section-intro">
+          Kérdése van, vagy szeretne ajánlatot kérni?
+          Keressen minket bizalommal!
+        </p>
+
+        <div class="contact-panel">
+
+          <div class="contact-row">
+            <div class="contact-icon" aria-hidden="true">T</div>
+            <div>
+              <span class="contact-label">Telefon – 1.</span>
+              <a href="tel:+36709085093">70/908-50-93</a>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-icon" aria-hidden="true">T</div>
+            <div>
+              <span class="contact-label">Telefon – 2.</span>
+              <a href="tel:+36709473933">70/947-39-33</a>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-icon" aria-hidden="true">@</div>
+            <div>
+              <span class="contact-label">E-mail</span>
+              <a href="mailto:becseiagi@gmail.com">becseiagi@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-icon" aria-hidden="true">⌖</div>
+            <div>
+              <span class="contact-label">Munkavégzés területe</span>
+              <strong>Hódmezővásárhely és környéke</strong>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="contact-note">
+          Hívjon minket, vagy írjon e-mailt az egyeztetéshez!
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p class="footer-accent">Becsei – Helyben vagyunk.</p>
+    <p>A szép otthon, a falaknál kezdődik.</p>
+    <p>Szolgáltatások Hódmezővásárhelyen és környékén.</p>
+  </footer>
+
+</body>
+</html>
