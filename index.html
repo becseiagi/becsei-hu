@@ -1,380 +1,47 @@
 HTML
-
-<!DOCTYPE html>
-<html lang="hu">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#a8d900">
-  <meta name="description" content="Becsei – Helyben vagyunk. Szobafestés, mázolás, tapétázás, hideg- és melegburkolás, térkövezés Hódmezővásárhelyen és környékén.">
-  <title>Becsei – Helyben vagyunk.</title>
-  <style>
-    :root {
-      --lime: #a8d900;
-      --dark: #171a16;
-      --light: #f5f7f0;
-      --gray: #62665e;
-    }
-
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--dark);
-      background: #fff;
-      line-height: 1.6;
-    }
-
-    a { color: inherit; }
-
-    .topbar {
-      background: var(--dark);
-      color: white;
-      padding: 12px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      font-size: 14px;
-    }
-
-    .topbar strong { color: var(--lime); }
-
-    header {
-      background: var(--lime);
-      padding: 22px 6%;
-    }
-
-    .brand {
-      font-size: clamp(27px, 5vw, 43px);
-      font-weight: 900;
-      letter-spacing: -1.5px;
-      line-height: 1.15;
-    }
-
-    .brand span { color: #fff; }
-
-    .slogan {
-      margin: 8px 0 0;
-      font-size: 17px;
-      font-weight: 700;
-    }
-
-    nav {
-      display: flex;
-      gap: 22px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-
-    nav a {
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 14px;
-    }
-
-    nav a:hover { text-decoration: underline; }
-
-    .hero {
-      background: var(--dark);
-      color: white;
-      padding: 76px 6% 82px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 230px;
-      height: 230px;
-      border: 34px solid var(--lime);
-      border-radius: 50%;
-      right: -95px;
-      bottom: -115px;
-      opacity: .75;
-    }
-
-    .hero-inner {
-      max-width: 850px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .eyebrow {
-      color: var(--lime);
-      text-transform: uppercase;
-      font-weight: 800;
-      letter-spacing: 2px;
-      font-size: 13px;
-    }
-
-    h1 {
-      font-size: clamp(36px, 7vw, 64px);
-      line-height: 1.08;
-      margin: 18px 0;
-      letter-spacing: -1.5px;
-    }
-
-    h1 span { color: var(--lime); }
-
-    .hero p {
-      font-size: 18px;
-      max-width: 620px;
-      color: #e3e6df;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 22px;
-      padding: 14px 23px;
-      background: var(--lime);
-      color: var(--dark);
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: 800;
-    }
-
-    .button:hover { background: #c0ef42; }
-
-    section { padding: 62px 6%; }
-
-    .section-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    h2 {
-      font-size: clamp(28px, 4vw, 40px);
-      line-height: 1.2;
-      margin: 0 0 14px;
-    }
-
-    .intro {
-      max-width: 700px;
-      color: var(--gray);
-      margin-bottom: 30px;
-    }
-
-    .services { background: var(--light); }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-      margin-top: 30px;
-    }
-
-    .service {
-      background: white;
-      border: 1px solid #e4e8dd;
-      border-top: 5px solid var(--lime);
-      padding: 23px;
-      border-radius: 5px;
-    }
-
-    .service .number {
-      color: #719400;
-      font-weight: 900;
-      font-size: 13px;
-      letter-spacing: 1px;
-    }
-
-    .service h3 {
-      margin: 9px 0;
-      font-size: 20px;
-    }
-
-    .service p {
-      color: var(--gray);
-      font-size: 15px;
-      margin-bottom: 0;
-    }
-
-    .promise {
-      background: var(--lime);
-    }
-
-    .promise h2 { max-width: 750px; }
-
-    .promise p {
-      max-width: 700px;
-      font-size: 17px;
-    }
-
-    .contact { background: var(--dark); color: white; }
-
-    .contact .intro { color: #d5d9d0; }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-      margin-top: 28px;
-    }
-
-    .contact-item {
-      padding: 20px;
-      border: 1px solid #41463e;
-      border-radius: 5px;
-    }
-
-    .contact-item h3 {
-      color: var(--lime);
-      margin-top: 0;
-    }
-
-    .contact-item a {
-      display: block;
-      margin: 9px 0;
-      text-decoration: none;
-      overflow-wrap: anywhere;
-    }
-
-    .contact-item a:hover { color: var(--lime); }
-
-    footer {
-      background: #0d0f0c;
-      color: #d0d4ca;
-      text-align: center;
-      padding: 23px 6%;
-      font-size: 13px;
-    }
-
-    footer strong { color: var(--lime); }
-
-    @media (max-width: 500px) {
-      .topbar { font-size: 12px; }
-      .hero { padding-top: 55px; padding-bottom: 65px; }
-      section { padding-top: 48px; padding-bottom: 48px; }
-      nav { gap: 14px; }
-    }
-  </style>
-</head>
+<!DOCTYPE html><html lang="hu"><head>  <meta charset="UTF-8">  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Becsei – Helyben vagyunk | Hódmezővásárhely</title>  <meta name="description" content="Szobafestés, mázolás, tapétázás, hideg- és melegburkolás, térkövezés Hódmezővásárhelyen és környékén.">  <style>    :root {      --lime: #a8d900;      --dark: #252a25;      --light: #f7f8f5;      --text: #333832;    }
+    * {      box-sizing: border-box;    }
+    html {      scroll-behavior: smooth;    }
+    body {      margin: 0;      font-family: Arial, Helvetica, sans-serif;      color: var(--text);      background: #ffffff;      line-height: 1.6;    }
+    header {      background: var(--light);      text-align: center;      padding: 20px 16px 28px;      border-bottom: 4px solid var(--lime);    }
+    .header-image {      display: block;      width: 100%;      max-width: 1100px;      height: auto;      margin: 0 auto 16px;    }
+    header h1 {      margin: 10px 0 4px;      color: var(--dark);      font-size: clamp(28px, 5vw, 46px);    }
+    header p {      margin: 0;      font-size: 18px;    }
+    .highlight {      color: #648500;      font-weight: bold;    }
+    nav {      display: flex;      justify-content: center;      flex-wrap: wrap;      gap: 10px 24px;      padding: 15px;      background: var(--dark);    }
+    nav a {      color: white;      text-decoration: none;      font-weight: bold;    }
+    nav a:hover {      color: var(--lime);    }
+    .hero {      padding: 55px 20px;      text-align: center;      background: #f4f6ef;    }
+    .hero h2 {      font-size: clamp(25px, 4vw, 38px);      margin: 0 0 12px;      color: var(--dark);    }
+    .hero p {      max-width: 700px;      margin: 0 auto 24px;      font-size: 18px;    }
+    .button {      display: inline-block;      padding: 13px 24px;      border-radius: 5px;      background: var(--lime);      color: var(--dark);      font-weight: bold;      text-decoration: none;    }
+    section {      padding: 45px 20px;      scroll-margin-top: 20px;    }
+    .container {      max-width: 1050px;      margin: 0 auto;    }
+    section h2 {      margin: 0 0 24px;      text-align: center;      color: var(--dark);      font-size: 30px;    }
+    .services {      display: grid;      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));      gap: 18px;    }
+    .service {      padding: 24px 18px;      border: 1px solid #e4e8dd;      border-top: 4px solid var(--lime);      border-radius: 7px;      background: white;      text-align: center;    }
+    .service h3 {      margin: 0 0 8px;      color: var(--dark);    }
+    .about {      background: var(--light);      text-align: center;    }
+    .about p {      max-width: 760px;      margin: 0 auto;      font-size: 17px;    }
+    .contact {      text-align: center;    }
+    .contact-details {      display: inline-block;      text-align: left;      font-size: 18px;      margin-bottom: 20px;    }
+    .contact-details a {      color: #526f00;      font-weight: bold;      text-decoration: none;    }
+    footer {      padding: 22px 16px;      background: var(--dark);      color: white;      text-align: center;    }
+    footer p {      margin: 4px 0;    }
+    @media (max-width: 600px) {      .hero {        padding: 38px 16px;      }
+      section {        padding: 35px 16px;      }    }  </style></head>
 <body>
-
-  <div class="topbar">
-    <strong>BE CSEI · HELYBEN VAGYUNK.</strong>
-    <span>Hódmezővásárhely és környéke</span>
-  </div>
-
-  <header>
-    <div class="brand">BECSEI <span>– HELYBEN VAGYUNK.</span></div>
-    <p class="slogan">A szép otthon, a falaknál kezdődik.</p>
-    <nav>
-      <a href="#szolgaltatasok">Szolgáltatások</a>
-      <a href="#rolunk">Rólunk</a>
-      <a href="#kapcsolat">Kapcsolat</a>
-    </nav>
-  </header>
-
-  <main>
-    <div class="hero">
-      <div class="hero-inner">
-        <div class="eyebrow">Megbízható kivitelezés</div>
-        <h1>Újítsa meg otthonát!<br><span>Mi megoldjuk.</span></h1>
-        <p>
-          Festés, burkolás és térkövezés Hódmezővásárhelyen
-          és a környező településeken. Gondos munka,
-          igényes kivitelezés.
-        </p>
-        <a class="button" href="#kapcsolat">Kérjen ajánlatot!</a>
-      </div>
-    </div>
-
-    <section class="services" id="szolgaltatasok">
-      <div class="section-inner">
-        <h2>Szolgáltatásaink</h2>
-        <p class="intro">
-          Otthona felújításához többféle munkában is
-          számíthat ránk.
-        </p>
-
-        <div class="service-grid">
-          <article class="service">
-            <div class="number">01 / FESTÉS</div>
-            <h3>Szobafestés</h3>
-            <p>Falak és mennyezetek megújítása, igényes beltéri festés.</p>
-          </article>
-
-          <article class="service">
-            <div class="number">02 / MÁZOLÁS</div>
-            <h3>Mázolás</h3>
-            <p>Felületek gondos mázolása és felfrissítése.</p>
-          </article>
-
-          <article class="service">
-            <div class="number">03 / TAPÉTÁZÁS</div>
-            <h3>Tapétázás</h3>
-            <p>Falak új megjelenése tapétával, precíz kivitelezéssel.</p>
-          </article>
-
-          <article class="service">
-            <div class="number">04 / BURKOLÁS</div>
-            <h3>Hideg- és melegburkolás</h3>
-            <p>Padlók és falak burkolása az otthon különböző helyiségeiben.</p>
-          </article>
-
-          <article class="service">
-            <div class="number">05 / KÜLTÉR</div>
-            <h3>Térkövezés</h3>
-            <p>Udvarok, járdák és egyéb kültéri felületek térkövezése.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="promise" id="rolunk">
-      <div class="section-inner">
-        <h2>A szép otthon, a falaknál kezdődik.</h2>
-        <p>
-          Hiszünk abban, hogy a jó munka alapja a gondos
-          kivitelezés és az ügyféllel való korrekt egyeztetés.
-          Célunk, hogy Ön elégedetten vehesse birtokba
-          megújult otthonát.
-        </p>
-        <strong>Becsei – Helyben vagyunk.</strong>
-      </div>
-    </section>
-
-    <section class="contact" id="kapcsolat">
-      <div class="section-inner">
-        <h2>Vegye fel velünk a kapcsolatot!</h2>
-        <p class="intro">
-          Kérdése van vagy felújítást tervez?
-          Keressen bennünket elérhetőségeinken!
-        </p>
-
-        <div class="contact-grid">
-          <div class="contact-item">
-            <h3>Telefon</h3>
-            <a href="tel:+36709085093">70/908-50-93</a>
-            <a href="tel:+36709473933">70/947-39-33</a>
-          </div>
-
-          <div class="contact-item">
-            <h3>E-mail</h3>
-            <a href="mailto:becseiagi@gmail.com">becseiagi@gmail.com</a>
-          </div>
-
-          <div class="contact-item">
-            <h3>Munkaterület</h3>
-            <p>Hódmezővásárhely és környéke</p>
-            <p>Festés · Burkolás · Térkövezés</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <strong>Becsei – Helyben vagyunk.</strong>
-    <p>© 2026 Becsei. Minden jog fenntartva.</p>
-  </footer>
-
-</body>
-</html>
+  <header>    <img      class="header-image"      src="Fejl%C3%A9c.jpg"      alt="Becsei – Helyben vagyunk"    >    <h1>Becsei – Helyben vagyunk.</h1>    <p>A szép otthon, a falaknál kezdődik.</p>  </header>
+  <nav>    <a href="#szolgaltatasok">Szolgáltatások</a>    <a href="#rolunk">Rólunk</a>    <a href="#kapcsolat">Kapcsolat</a>  </nav>
+  <main>    <section class="hero">      <h2>Megbízható munka, szép otthon.</h2>      <p>        Festés, burkolás és térkövezés Hódmezővásárhelyen        és a környező településeken.      </p>      <a class="button" href="#kapcsolat">Kérjen ajánlatot!</a>    </section>
+    <section id="szolgaltatasok">      <div class="container">        <h2>Szolgáltatásaink</h2>
+        <div class="services">          <article class="service">            <h3>Szobafestés</h3>            <p>Falak és mennyezetek igényes festése.</p>          </article>
+          <article class="service">            <h3>Mázolás</h3>            <p>Felületek gondos mázolása, megújítása.</p>          </article>
+          <article class="service">            <h3>Tapétázás</h3>            <p>Tapétázás gondos kivitelezéssel.</p>          </article>
+          <article class="service">            <h3>Hideg- és melegburkolás</h3>            <p>Burkolási munkák otthonokban és más helyiségekben.</p>          </article>
+          <article class="service">            <h3>Térkövezés</h3>            <p>Járdák, udvarok és kerti felületek térkövezése.</p>          </article>        </div>      </div>    </section>
+    <section id="rolunk" class="about">      <div class="container">        <h2>Miért válasszon minket?</h2>        <p>          Fontos számunkra a gondos munkavégzés, az igényes kivitelezés          és az ügyfeleinkkel való korrekt együttműködés.          Hódmezővásárhelyen és környékén állunk rendelkezésére.        </p>      </div>    </section>
+    <section id="kapcsolat" class="contact">      <div class="container">        <h2>Kapcsolat</h2>        <p>Keressen minket bizalommal ajánlatkéréshez!</p>
+        <div class="contact-details">          <p>            Telefon:            <a href="tel:+36709085093">70/908-50-93</a>          </p>          <p>            Telefon:            <a href="tel:+36709473933">70/947-39-33</a>          </p>          <p>            E-mail:            <a href="mailto:becseiagi@gmail.com">becseiagi@gmail.com</a>          </p>          <p><strong>Terület:</strong> Hódmezővásárhely és környéke</p>        </div>      </div>    </section>  </main>
+  <footer>    <p><strong>Becsei – Helyben vagyunk.</strong></p>    <p>A szép otthon, a falaknál kezdődik.</p>  </footer>
+</body></html>
