@@ -484,6 +484,31 @@
         transition: none !important;
       }
     }
+ .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 20px 0 35px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .gallery-grid img {
+    height: 160px;
+  }
+}
   </style>
 </head>
 
@@ -576,14 +601,31 @@
       </div>
     </section>
 <section class="section" id="galeria">
-      <div class="container">
-        <h2 class="section-heading">Galéria</h2>
-        <div class="heading-line"></div>
-        <p class="section-intro">
-          Néhány kép az általunk végzett munkákról.
-        </p>
-      </div>
-    </section>
+  <div class="container">
+    <h2 class="section-heading">Galéria</h2>
+    <div class="heading-line"></div>
+    <p class="section-intro">
+      Néhány kép az általunk végzett munkákról.
+    </p>
+
+    <h3>Szobafestés</h3>
+    <div class="gallery-grid">
+      <img src="./zöld01.jpg" alt="Szobafestés – zöld fal">
+      <img src="./zöld02.jpg" alt="Szobafestés – zöld fal">
+      <img src="./zöld03.jpg" alt="Szobafestés – zöld fal">
+      <img src="./tetőtér01.jpg" alt="Tetőtéri szobafestés">
+      <img src="./szines01.jpg" alt="Színes fal festése">
+      <img src="./Kék1.jpg" alt="Kék fal festése">
+    </div>
+
+    <h3>Burkolás</h3>
+    <div class="gallery-grid">
+      <img src="./Csilla01.jpg" alt="Burkolási munka">
+      <img src="./Csilla02.jpg" alt="Burkolási munka">
+      <img src="./Csilla03.jpg" alt="Burkolási munka">
+    </div>
+  </div>
+</section>
     <section class="section about" id="rolunk">
       <div class="container about-content">
         <h2 class="section-heading">Miért válasszon minket?</h2>
