@@ -18,12 +18,12 @@
 }
 
 .header-inner {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 20px;
 }
 
 .header-brand {
@@ -43,11 +43,22 @@
   display: block;
 }
 
-.tagline {
-  margin: 5px 0 0;
-  color: #242824;
-  font-size: 14px;
-  font-weight: 600;
+.header-slogan {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-slogan .tagline {
+  margin: 0;
+  color: var(--dark);
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 700;
+  font-family: "Caveat Brush", cursive;
+  transform: rotate(-6deg);
+  text-align: center;
 }
 
 .header-contact {
