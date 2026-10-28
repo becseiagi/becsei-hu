@@ -52,11 +52,24 @@
     display: block;
   }
 
-  .tagline {
-    margin: 5px 0 0;
-    color: #242824;
-    font-size: 14px;
-  }
+  .header-slogan {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-slogan .tagline {
+  margin: 0;
+  color: #252525;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 700;
+  font-family: "Caveat Brush", cursive;
+  transform: rotate(-6deg);
+  text-align: center;
+  line-height: 1.2;
+}
 
   .header-contact {
     display: flex;
@@ -238,7 +251,7 @@ footer p.footer-accent {
     </div>
 
     <div class="header-slogan">
-      <p class="tagline">A szép otthon, a falaknál kezdődik.</p>
+      <p class="tagline">A szép otthon, a falaknál <br> kezdődik.</p>
     </div>
 
     <div class="header-contact">
