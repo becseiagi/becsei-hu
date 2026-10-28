@@ -466,7 +466,18 @@ footer p.footer-accent {
       
   <script>
 document.addEventListener('DOMContentLoaded', function () {
-  const buttons = document.querySelectorAll('.gallery-filters button');
+    
+  document.querySelectorAll('.gallery-grid').forEach(function (grid) {
+      
+    Array.from(grid.childNodes).forEach(function (node) {
+      if (node.nodeType === Node.TEXT_NODE && !
+          node.textContent.trim()) {
+        node.remove();
+      }
+    });
+  });
+    
+    const buttons = document.querySelectorAll('.gallery-filters button');
   const items = document.querySelectorAll('h2[data-category], .gallery-grid[data-category]');
 
   buttons.forEach(function (button) {
